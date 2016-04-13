@@ -1,0 +1,39 @@
+import java.util.ArrayList;
+
+//this class for a single helix data
+public class Helix {
+	private ArrayList<Pair> basePairs = null;
+	boolean isValid;
+	boolean isComplete;
+
+	public Helix() {
+		isValid = true;
+		isComplete = false;
+		basePairs = new ArrayList<Pair>();
+	}
+
+	/*
+	 * public int getRi(){ return Ri; }
+	 * 
+	 * public int getRj(){ return Rj; }
+	 */
+
+	public void addBasePair(Pair p) {
+		basePairs.add(p);
+	}
+
+	public Object getBasePairs() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean isLessThan3BaseBetweenLastPair() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean isLessThan3BasePairs() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	}
