@@ -1,0 +1,53 @@
+import java.util.ArrayList;
+ 
+public class Helics 
+{
+	private ArrayList<String> H = null; //initializes the array list
+	
+	public Helics() 
+	{
+	H = new ArrayList<String>(); //specifies the type of elements in the list
+	}
+	
+	public void add(String helix) 
+	{
+		H.add(helix); //adds an element named "helix"
+	}
+	
+	public ArrayList<String> getH() 
+	{
+		return H; //returns H to the caller, to make it accessible
+	}
+	
+	public boolean alreadyIncluded(Pair pair)
+	{
+		for (String helix: H) //for loop 
+		{
+			for (Pair otherpair : helix.getPairs())
+			{
+				if (pair.getI() == otherpair.getI() || pair.get() == otherpair.getJ() || pair.getJ() == otherpair.getI() || pair.getJ() == otherpair.getJ()) 
+{
+	return true;
+}
+
+			}
+		}
+		return false;
+	
+	
+}
+	public String toString() {
+		String string ="";
+		for (String helix : H)
+		{string += helix + "\n------------------\n";
+		}
+		return string;
+	}
+
+	public void add(Helix helix) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
+
