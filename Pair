@@ -1,0 +1,38 @@
+//this class for a possible pair data
+public class Pair {
+	private int i;
+	private int j;
+
+	public Pair(int i, int j) {
+		this.i = i;
+		this.j = j;
+	}
+
+	public int getI() {
+		return i;
+	}
+
+	public int getJ() {
+		return j;
+	}
+
+	public boolean isCanonicalPair(String rndSeq) {
+		String temp = rndSeq.charAt(i-1) + "" + rndSeq.charAt(j-1);
+		if (temp.equals("GC") || temp.equals("GU") || temp.equals("AU")
+				|| temp.equals("CG") || temp.equals("UG") || temp.equals("UA"))
+			return true;
+		return false;
+	}
+
+	public String toString() {
+		String s = "";
+		s += "(" + i + "," + j + ")";
+
+		return s;
+	}
+
+	public int getPairs() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
